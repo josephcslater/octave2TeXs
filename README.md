@@ -8,7 +8,7 @@ Download `octave2texs-<version>.tar.gz` from the
 [latest release](https://github.com/josephcslater/octave2TeXs/releases/latest), then in Octave:
 
 ```octave
-pkg install octave2texs-2026.10.8.tar.gz
+pkg install octave2texs-2026.10.8.1.tar.gz
 pkg load octave2texs
 ```
 
