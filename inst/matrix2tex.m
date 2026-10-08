@@ -55,9 +55,9 @@ function texstr = matrix2tex (a, format, env)
     for j = 1:n
       cells{j} = element2tex (a(i,j), format);
     end
-    rows{i} = strjoin (cells, ' & ');
+    rows{i} = joinstr (cells, ' & ');
   end
-  texstr = strjoin (rows, [' \\' nl]);
+  texstr = joinstr (rows, [' \\' nl]);
 
   if (! isempty (env))
     texstr = ['\begin{' env '}' nl texstr nl '\end{' env '}'];
@@ -66,6 +66,19 @@ function texstr = matrix2tex (a, format, env)
   if (nargout == 0)
     fprintf ('%s\n', texstr);
     clear texstr
+  end
+
+end
+
+% strjoin interprets escape sequences in the delimiter, so join manually
+function s = joinstr (c, delim)
+
+  s = '';
+  for k = 1:numel (c)
+    if (k > 1)
+      s = [s delim];
+    end
+    s = [s c{k}];
   end
 
 end
