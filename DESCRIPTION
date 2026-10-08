@@ -1,0 +1,9 @@
+Name: octave2texs
+Version: 0.2.0
+Date: 2026-10-08
+Author: Joseph C. Slater <joseph.c.slater@gmail.com>
+Maintainer: Joseph C. Slater <joseph.c.slater@gmail.com>
+Title: Octave to TeX
+Description: Convert Octave/Matlab matrices and polynomials to LaTeX.
+License: MIT
+Url: https://github.com/josephcslater/octave2TeXs

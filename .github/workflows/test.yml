@@ -1,0 +1,16 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  octave:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Octave
+        run: sudo apt-get update && sudo apt-get install -y octave
+      - name: Run tests
+        run: |
+          octave --no-gui --eval "addpath('inst'); \
+            [n1,m1] = test('poly2tex','quiet'); \
+            [n2,m2] = test('matrix2tex','quiet'); \
+            printf('poly2tex %d/%d, matrix2tex %d/%d\n', n1,m1,n2,m2); \
+            exit(double(n1 != m1 || n2 != m2));"
