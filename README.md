@@ -4,14 +4,17 @@ Convert Octave/Matlab matrices and polynomials to LaTeX.
 
 ## Install
 
-From Octave, after downloading a release archive or cloning the repository:
+Download `octave2texs-<version>.tar.gz` from the
+[latest release](https://github.com/josephcslater/octave2TeXs/releases/latest), then in Octave:
 
 ```octave
-pkg install octave2texs.tar.gz
+pkg install octave2texs-2026.10.8.tar.gz
 pkg load octave2texs
 ```
 
 Or without installing: `addpath('inst')`.
+
+Versions use calendar versioning (`YYYY.M.D`, no leading zeros, tag `vYYYY.M.D`).
 
 ## Usage
 
